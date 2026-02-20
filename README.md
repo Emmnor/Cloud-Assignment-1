@@ -26,9 +26,7 @@ This covers the first assignment in PROG2005 Cloud Technologies
 ## Expected input values and return values from each endpoint
 ### Status endpoint
 <p>Input value</p>
-<code>
-    countryinfo/v1/status
-</code>
+<code> countryinfo/v1/status </code>
 
 <p>Expected output value</p>
 
@@ -44,9 +42,7 @@ This covers the first assignment in PROG2005 Cloud Technologies
 ### exchange endpoint
 <p>Input value</p>
 
-<code>
-countryinfo/v1/exchange/{2_letter_ISO_code}
-</code>
+<code> countryinfo/v1/exchange/{2_letter_ISO_code} </code>
 
 <p>Expected output value with "no"</p>
 
@@ -67,9 +63,7 @@ countryinfo/v1/exchange/{2_letter_ISO_code}
 ### Info endpoint
 <p>Input value</p>
 
-<code>
-countryinfo/v1/info{2_letter_ISO_code}
-</code>
+<code> countryinfo/v1/info{2_letter_ISO_code} </code>
 
 <p>Expected output value with "no"</p>
 
