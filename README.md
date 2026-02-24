@@ -93,7 +93,7 @@ This covers the first assignment in PROG2005 Cloud Technologies
 ```
 
 ## External services
-This application relies on 2 external endpoint services.
+This application relies on 2 external endpoints:
 <p>
 Rest Countries <code> http://129.241.150.113:8080/v3.1/ </code> <br>
 Currency API <code> http://129.241.150.113:9090/currency/ </code>
@@ -101,7 +101,16 @@ Currency API <code> http://129.241.150.113:9090/currency/ </code>
 
 ## Deployment/Setup
 The service is deployed in render. If no enviorment variable is available, the default port is chosen (8080)
-
+<br> <br>
+To access the service you go to
+<code> https://cloud-assignment-1-u94a.onrender.comhttps://cloud-assignment-1-u94a.onrender.com/{endpoint_inputvalue} </code>
+<br> <br>
+To self deploy you clone down the project and type
+```
+cd assignment-1
+go build init
+go run .
+```
 
 
 
