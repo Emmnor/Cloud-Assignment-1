@@ -30,7 +30,7 @@ This covers the first assignment in PROG2005 Cloud Technologies
 
 <p>Expected output value</p>
 
-```
+``` json
 {
     "RestCountriesApi":"200 OK", 
     "CurrenciesApi":"200 OK",
@@ -38,15 +38,19 @@ This covers the first assignment in PROG2005 Cloud Technologies
     "Uptime":7
 }
 ```
+Expected status-code `200 OK`
 
 ### exchange endpoint
 <p>Input value</p>
 
 <code> countryinfo/v1/exchange/{2_letter_ISO_code} </code>
 
-<p>Expected output value with "no"</p>
+<p>Example <code>ountryinfo/v1/exchange/no</code></p>
+<p>Expected output</p>
 
-```
+> **_NB:_** If there are multiple base currencies, the last currency which is registered, is the one displayed in the GET reply
+
+``` json
 {
   "Base-Currency": [
     "NOK"
@@ -59,15 +63,17 @@ This covers the first assignment in PROG2005 Cloud Technologies
   }
 }
 ```
+Expected status-code `200 OK`
 
 ### Info endpoint
 <p>Input value</p>
 
 <code> countryinfo/v1/info{2_letter_ISO_code} </code>
 
-<p>Expected output value with "no"</p>
+<p>Example <code> countryinfo/v1/info/no </code></p>
+<p>Expected output</p>
 
-```
+``` json
 {
     "Borders": [
         "FIN",
@@ -91,6 +97,7 @@ This covers the first assignment in PROG2005 Cloud Technologies
     "area": 323802
 }
 ```
+Expected status-code `200 OK`
 
 ## External services
 This application relies on 2 external endpoints:
@@ -102,8 +109,12 @@ Currency API <code> http://129.241.150.113:9090/currency/ </code>
 ## Deployment/Setup
 The service is deployed in render. If no enviorment variable is available, the default port is chosen (8080)
 <br> <br>
-To access the service you go to
-<code> https://cloud-assignment-1-u94a.onrender.comhttps://cloud-assignment-1-u94a.onrender.com/{endpoint_inputvalue} </code>
+To access the service you can go to <br>
+
+- Status : [countryinfo/v1/status](https://cloud-assignment-1-u94a.onrender.com/countryinfo/v1/status)
+- Exchange : [countryinfo/v1/exchange/no](https://cloud-assignment-1-u94a.onrender.com/countryinfo/v1/exchange/no)
+- Info : [countryinfo/v1/info/no](https://cloud-assignment-1-u94a.onrender.com/countryinfo/v1/info/no)
+
 <br> <br>
 To self deploy you clone down the project and type
 ```
@@ -111,7 +122,6 @@ cd assignment-1
 go build init
 go run .
 ```
-
 
 
 
