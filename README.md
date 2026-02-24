@@ -1,5 +1,15 @@
 # README Assignment 1
-This covers the first assignment in PROG2005 Cloud Technologies 
+This covers the first assignment in PROG2005 Cloud Technologies
+
+## Table of Contents
+[Summary](#summary)  
+[Expected Input Values and Return Values from Each Endpoint](#expected-input-values-and-return-values-from-each-endpoint)  
+&emsp;&emsp;&emsp; [Status Endpoint](#status-endpoint)  
+&emsp;&emsp;&emsp; [Exchange Endpoint](#exchange-endpoint)  
+&emsp;&emsp;&emsp; [Info Endpoint](#info-endpoint)  
+[External Services](#external-services)  
+[Deployment/Setup](#deploymentsetup)  
+
 ## Summary
 <p>
     A rest service that is provided with 3 endpoints:
@@ -117,7 +127,8 @@ To access the service you can go to <br>
 
 <br> <br>
 To self deploy you clone down the project and type
-```
+
+```commandline
 cd assignment-1
 go build init
 go run .
