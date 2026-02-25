@@ -48,7 +48,8 @@ func infoHandlerGet(w http.ResponseWriter, r *http.Request) {
 	err, mp = formatingInfoResponse(country)
 	if err != nil {
 		http.Error(w, "Ops something on our end went wrong: "+string(http.StatusInternalServerError), http.StatusInternalServerError)
-		log.Fatal(err.Error(), ", Could not format map for Get response")
+		log.Fatal(err.Error(), ", Could not format map for the Get response")
+		return
 	}
 
 	// gjør sånn at jeg skriver ut til get hver gang jeg kaller encoder.encode(noe)
@@ -59,6 +60,7 @@ func infoHandlerGet(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		http.Error(w, "Encode Error", http.StatusBadRequest)
+		log.Println(err.Error())
 	}
 
 }

@@ -26,6 +26,7 @@ func exchangeHandlerGet(w http.ResponseWriter, r *http.Request) {
 	resp, err := http.Get("http://129.241.150.113:8080/v3.1/alpha/" + r.PathValue("p1") + "?fields=name,borders,currencies")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Fatal(err.Error())
 		return
 	}
 
@@ -36,6 +37,11 @@ func exchangeHandlerGet(w http.ResponseWriter, r *http.Request) {
 	}
 
 	err, mp = formatingExchangeResponse(exchange)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		log.Println(err.Error())
+		return
+	}
 
 	encoder := json.NewEncoder(w)
 	encoder.SetIndent("", "  ")
