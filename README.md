@@ -1,5 +1,6 @@
-# README Assignment 1
+# README
 This covers the first assignment in PROG2005 Cloud Technologies
+Small rest service that returns and fetches values from an external endpoint
 
 ## Table of Contents
 [Summary](#summary)  
